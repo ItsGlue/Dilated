@@ -61,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsGrounded()
     {
+        squashStretchAnimator.SetTrigger("Land");
         raycastDistance = 0.5f * transform.localScale.y;
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raycastDistance, groundLayer);
         return hit.collider != null;
@@ -85,11 +86,6 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        squashStretchAnimator.SetTrigger("Land");
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            squashStretchAnimator.SetTrigger("Land");
-        }
         if (collision.gameObject.CompareTag("Danger"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

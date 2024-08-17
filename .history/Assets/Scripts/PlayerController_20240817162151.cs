@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public ParticleSystem dust;
     private bool controlEnabled;
 
-    public Animator squashStretchAnimator;
+    public Animator squashStretchAnimator;Z
 
     private void Start()
     {
@@ -44,7 +44,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (isGrounded && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)))
         {
-            squashStretchAnimator.SetTrigger("Jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             playDust();
         }
@@ -85,11 +84,6 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        squashStretchAnimator.SetTrigger("Land");
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            squashStretchAnimator.SetTrigger("Land");
-        }
         if (collision.gameObject.CompareTag("Danger"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);

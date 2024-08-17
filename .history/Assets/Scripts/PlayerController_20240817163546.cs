@@ -84,11 +84,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
-        squashStretchAnimator.SetTrigger("Land");
         if (collision.gameObject.CompareTag("Ground"))
         {
-            squashStretchAnimator.SetTrigger("Land");
+            squashStretchAnimator.SetTrigger("Jump");
         }
         if (collision.gameObject.CompareTag("Danger"))
         {

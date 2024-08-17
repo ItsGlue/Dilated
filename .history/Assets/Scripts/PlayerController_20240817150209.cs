@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,8 +13,6 @@ public class PlayerMovement : MonoBehaviour
     private bool facingRight = true;
     public ParticleSystem dust;
     private bool controlEnabled;
-
-    public Animator squashStretchAnimator;
 
     private void Start()
     {
@@ -44,7 +41,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (isGrounded && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)))
         {
-            squashStretchAnimator.SetTrigger("Jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             playDust();
         }
@@ -84,14 +80,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
-        squashStretchAnimator.SetTrigger("Land");
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            squashStretchAnimator.SetTrigger("Land");
-        }
+        // Check if the object the player collided with has the "Danger" tag
         if (collision.gameObject.CompareTag("Danger"))
         {
+            // Reload the current scene
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

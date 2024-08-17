@@ -8,14 +8,16 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
     public float raycastDistance = 0.5f;
     public Vector2 resetPosition;
+    public ParticleSystem dust;
 
     private Rigidbody2D rb;
     private bool isGrounded;
     private bool facingRight = true;
-    public ParticleSystem dust;
     private bool controlEnabled;
-
-    public Animator squashStretchAnimator;
+    private float coyoteTime = 0.2f; 
+    private float coyoteTimeCounter;
+    private float jumpBufferTime = 0.1f; 
+    private float jumpBufferCounter;
 
     private void Start()
     {
@@ -26,9 +28,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (!controlEnabled) {
+        if (!controlEnabled)
+        {
             return;
         }
+
         moveSpeed = 5f * Mathf.Abs(transform.localScale.y);
         jumpForce = 5f * transform.localScale.y;
         rb.gravityScale = transform.localScale.y;
@@ -42,17 +46,42 @@ public class PlayerMovement : MonoBehaviour
 
         isGrounded = IsGrounded();
 
-        if (isGrounded && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)))
+        // coyote :3 + buffer
+        if (isGrounded)
         {
-            squashStretchAnimator.SetTrigger("Jump");
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            playDust();
+            coyoteTimeCounter = coyoteTime;
         }
-        if (Input.GetKeyDown("r")) {
+        else
+        {
+            coyoteTimeCounter -= Time.deltaTime;
+        }
+
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
+        {
+            jumpBufferCounter = jumpBufferTime;
+        }
+        else
+        {
+            jumpBufferCounter -= Time.deltaTime;
+        }
+
+        if (jumpBufferCounter > 0f && coyoteTimeCounter > 0f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            jumpBufferCounter = 0f;
+            playDust();
+            SquashStretchEffect("jump");
+        }
+
+        if (Input.GetKeyDown("r"))
+        {
             transform.position = resetPosition;
-            if (!facingRight) {
-                transform.localScale = new Vector3(-1,1,1);
-            } else {
+            if (!facingRight)
+            {
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
+            else
+            {
                 transform.localScale = Vector3.one;
             }
             rb.velocity = Vector2.zero;
@@ -75,24 +104,48 @@ public class PlayerMovement : MonoBehaviour
         transform.localScale = scaler;
     }
 
-    public void playDust() {
-        dust.Play();   
+    public void playDust()
+    {
+        dust.Play();
     }
-    private void Control(bool enable) {
+
+    private void Control(bool enable)
+    {
         controlEnabled = enable;
+    }
+
+
+    private void SquashStretchEffect(string state)
+    {
+        if (state == "jump")
+        {
+            transform.localScale = new Vector3(transform.localScale.x * 0.9f, transform.localScale.y * 1.1f, 1f); 
+        }
+        else if (state == "land")
+        {
+            transform.localScale = new Vector3(transform.localScale.x * 1.1f, transform.localScale.y * 0.9f, 1f); 
+        }
+        else if (state == "reset")
+        {
+            transform.localScale = ;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
-        squashStretchAnimator.SetTrigger("Land");
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            squashStretchAnimator.SetTrigger("Land");
-        }
         if (collision.gameObject.CompareTag("Danger"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+        else if (isGrounded)
+        {
+            SquashStretchEffect("land");
+            Invoke("ResetSquashStretch", 0.1f);
+        }
+    }
+
+    private void ResetSquashStretch()
+    {
+        SquashStretchEffect("reset");
     }
 }
