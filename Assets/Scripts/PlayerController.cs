@@ -10,14 +10,19 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private bool isGrounded;
     private bool facingRight = true;
+    private bool controlEnabled;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        enabled = true;
     }
 
     private void Update()
     {
+        if (!controlEnabled) {
+            return;
+        }
         float moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
@@ -47,5 +52,8 @@ public class PlayerMovement : MonoBehaviour
         Vector3 scaler = transform.localScale;
         scaler.x *= -1;
         transform.localScale = scaler;
+    }
+    private void Control(bool enable) {
+        controlEnabled = enable;
     }
 }
