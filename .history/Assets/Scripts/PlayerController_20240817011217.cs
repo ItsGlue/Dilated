@@ -3,13 +3,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public float jumpForce = 5f;
+    public float jumpForce = 10f;
     public LayerMask groundLayer;
-    public float raycastDistance = 0.5f;
+    public float raycastDistance = 1f; // Adjust this to fit your player height
 
     private Rigidbody2D rb;
     private bool isGrounded;
-    private bool facingRight = true;
 
     private void Start()
     {
@@ -18,18 +17,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        // Handle horizontal movement
         float moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
-        if (moveInput > 0 && !facingRight)
-            Flip();
-        else if (moveInput < 0 && facingRight)
-            Flip();
-
         isGrounded = IsGrounded();
+        Debug.Log("Is Grounded: " + isGrounded);
 
         if (isGrounded && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)))
         {
+            Debug.Log("Jumping!");
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
     }
@@ -39,13 +36,5 @@ public class PlayerMovement : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raycastDistance, groundLayer);
         Debug.DrawRay(transform.position, Vector2.down * raycastDistance, Color.red);
         return hit.collider != null;
-    }
-
-    private void Flip()
-    {
-        facingRight = !facingRight;
-        Vector3 scaler = transform.localScale;
-        scaler.x *= -1;
-        transform.localScale = scaler;
     }
 }

@@ -3,9 +3,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public float jumpForce = 5f;
+    public float jumpForce = 10f;
+    public Transform groundCheck;
     public LayerMask groundLayer;
-    public float raycastDistance = 0.5f;
 
     private Rigidbody2D rb;
     private bool isGrounded;
@@ -18,32 +18,36 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        // Handle horizontal movement
         float moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
+        // Flip the player's direction based on the movement input
         if (moveInput > 0 && !facingRight)
+        {
             Flip();
+        }
         else if (moveInput < 0 && facingRight)
+        {
             Flip();
+        }
 
-        isGrounded = IsGrounded();
+        // Check if the player is on the ground
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
 
+        // Handle jumping
         if (isGrounded && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
     }
 
-    private bool IsGrounded()
-    {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raycastDistance, groundLayer);
-        Debug.DrawRay(transform.position, Vector2.down * raycastDistance, Color.red);
-        return hit.collider != null;
-    }
-
     private void Flip()
     {
+        // Switch the way the player is labelled as facing
         facingRight = !facingRight;
+
+        // Multiply the player's x local scale by -1 to flip
         Vector3 scaler = transform.localScale;
         scaler.x *= -1;
         transform.localScale = scaler;
