@@ -11,14 +11,19 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded;
     private bool facingRight = true;
     public ParticleSystem dust;
+    private bool controlEnabled;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        enabled = true;
     }
 
     private void Update()
     {
+        if (!controlEnabled) {
+            return;
+        }
         float moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
@@ -54,5 +59,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void playDust() {
         dust.Play();   
+    }
+    private void Control(bool enable) {
+        controlEnabled = enable;
     }
 }
