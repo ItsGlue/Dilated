@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        enabled = true;
+        controlEnabled = true;
         resetPosition = Vector2.zero;
     }
 

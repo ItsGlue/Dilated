@@ -709,7 +709,7 @@ MonoBehaviour:
     m_Bits: 8
   raycastDistance: 0.5
   resetPosition: {x: 0, y: 0}
-  dust: {fileID: 0}
+  dust: {fileID: 5981988686695595503, guid: 6359f510130714d7c9d94b52fb5e3d1a, type: 3}
 --- !u!50 &1700758683
 Rigidbody2D:
   serializedVersion: 4

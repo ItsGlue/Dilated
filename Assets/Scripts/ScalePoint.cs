@@ -31,7 +31,7 @@ public class ScalePoint : MonoBehaviour
             scaling = true;
             prevPosition = Input.mousePosition;
         }
-        if (Input.GetMouseButtonUp(0)) {
+        if (Input.GetMouseButtonUp(0) && scaling) {
             player.GetComponent<Rigidbody2D>().isKinematic = false;
             player.GetComponent<Rigidbody2D>().velocity = savedVelocity;
             player.SendMessage("Control", true);
