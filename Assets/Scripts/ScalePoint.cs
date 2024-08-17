@@ -42,7 +42,14 @@ public class ScalePoint : MonoBehaviour
             Vector2 playerVec = player.transform.position - transform.position;
             float dist = mouse.magnitude * Mathf.Cos(Vector2.Angle(mouse, playerVec) * Mathf.Deg2Rad);
             player.transform.Translate(-playerVec.normalized * dist * scaleFactor);
-            player.transform.localScale *= (player.transform.position - transform.position).magnitude/playerVec.magnitude;
+            if (Vector2.Angle(player.transform.position - transform.position,playerVec) > 90) {
+                player.transform.localScale *= -(player.transform.position - transform.position).magnitude/playerVec.magnitude;
+                Vector3 scaler = player.transform.localScale;
+                scaler.x *= -1;
+                player.transform.localScale = scaler;
+            } else {
+                player.transform.localScale *= (player.transform.position - transform.position).magnitude/playerVec.magnitude;
+            }
             prevPosition = Input.mousePosition;
         }
     }

@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 5f;
     public LayerMask groundLayer;
     public float raycastDistance = 0.5f;
+    public Vector2 resetPosition;
 
     private Rigidbody2D rb;
     private bool isGrounded;
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         enabled = true;
+        resetPosition = Vector2.zero;
     }
 
     private void Update()
@@ -23,6 +25,9 @@ public class PlayerMovement : MonoBehaviour
         if (!controlEnabled) {
             return;
         }
+        moveSpeed = 5f * Mathf.Abs(transform.localScale.y);
+        jumpForce = 5f * transform.localScale.y;
+        rb.gravityScale = transform.localScale.y;
         float moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
@@ -37,12 +42,21 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
+        if (Input.GetKeyDown("r")) {
+            transform.position = resetPosition;
+            if (!facingRight) {
+                transform.localScale = new Vector3(-1,1,1);
+            } else {
+                transform.localScale = Vector3.one;
+            }
+            rb.velocity = Vector2.zero;
+        }
     }
 
     private bool IsGrounded()
     {
+        raycastDistance = 0.5f * transform.localScale.y;
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raycastDistance, groundLayer);
-        Debug.DrawRay(transform.position, Vector2.down * raycastDistance, Color.red);
         return hit.collider != null;
     }
 
