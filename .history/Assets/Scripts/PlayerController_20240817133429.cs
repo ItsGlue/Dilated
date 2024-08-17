@@ -32,7 +32,6 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            playDust();
         }
     }
 
@@ -45,7 +44,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Flip()
     {
-        playDust();
         facingRight = !facingRight;
         Vector3 scaler = transform.localScale;
         scaler.x *= -1;
@@ -53,6 +51,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public void playDust() {
-        dust.Play();   
+        dust.Play   
     }
 }
