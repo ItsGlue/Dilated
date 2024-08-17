@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
     public float raycastDistance = 0.5f;
     public Vector2 resetPosition;
+    public GameObject currScalePoint;
+    public bool canOut = true;
+    public bool canIn = true;
 
     private Rigidbody2D rb;
     private bool isGrounded;
@@ -76,5 +79,18 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Control(bool enable) {
         controlEnabled = enable;
+    }
+    void OnCollisionEnter2D(Collision2D other) {
+        if (!currScalePoint) return;
+        Vector2 normal = other.GetContact(0).normal;
+        if (Vector2.Angle(normal, transform.position - currScalePoint.transform.position) < 90) {
+            canIn = false;
+        } else {
+            canOut = false;
+        }
+    }
+    void OnCollisionExit2D(Collision2D other) {
+        canOut = true;
+        canIn = true;
     }
 }

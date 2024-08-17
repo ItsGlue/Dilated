@@ -77,7 +77,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 316123933
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 453c866c39dff475e85d456542bc961f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -109,6 +109,9 @@ MonoBehaviour:
     m_Bits: 8
   raycastDistance: 0.5
   resetPosition: {x: 0, y: 0}
+  currScalePoint: {fileID: 0}
+  canOut: 1
+  canIn: 1
   dust: {fileID: 2753836877734813760}
 --- !u!50 &1518945641218439214
 Rigidbody2D:

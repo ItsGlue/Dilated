@@ -13,6 +13,9 @@ public class ScalePoint : MonoBehaviour
     private bool scaling;
     private Vector3 prevPosition;
     private float scaleFactor = 0.03f;
+
+    private Vector2 mouse;
+    private Vector2 playerVec;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,32 +27,39 @@ public class ScalePoint : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && col.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition))) {
-            player.GetComponent<Rigidbody2D>().isKinematic = true;
+            player.GetComponent<Rigidbody2D>().gravityScale = 0;
             savedVelocity = player.GetComponent<Rigidbody2D>().velocity;
             player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             player.SendMessage("Control", false);
             scaling = true;
             prevPosition = Input.mousePosition;
+            player.GetComponent<PlayerMovement>().currScalePoint = gameObject;
+            player.AddComponent<SliderJoint2D>().connectedBody = GetComponent<Rigidbody2D>();
         }
         if (Input.GetMouseButtonUp(0) && scaling) {
-            player.GetComponent<Rigidbody2D>().isKinematic = false;
+            player.GetComponent<Rigidbody2D>().gravityScale = player.transform.localScale.y;
             player.GetComponent<Rigidbody2D>().velocity = savedVelocity;
             player.SendMessage("Control", true);
             scaling = false;
+            player.GetComponent<PlayerMovement>().currScalePoint = null;
+            Destroy(player.GetComponent<SliderJoint2D>());
         }
         if (scaling) {
-            Vector2 mouse = Input.mousePosition - prevPosition;
-            Vector2 playerVec = player.transform.position - transform.position;
+            mouse = Input.mousePosition - prevPosition;
+            playerVec = player.transform.position - transform.position;
             float dist = mouse.magnitude * Mathf.Cos(Vector2.Angle(mouse, playerVec) * Mathf.Deg2Rad);
-            player.transform.Translate(-playerVec.normalized * dist * scaleFactor);
-            if (Vector2.Angle(player.transform.position - transform.position,playerVec) > 90) {
-                player.transform.localScale *= -(player.transform.position - transform.position).magnitude/playerVec.magnitude;
-                Vector3 scaler = player.transform.localScale;
-                scaler.x *= -1;
-                player.transform.localScale = scaler;
-            } else {
-                player.transform.localScale *= (player.transform.position - transform.position).magnitude/playerVec.magnitude;
+            if ((dist > 0 || player.GetComponent<PlayerMovement>().canOut) && (dist < 0 || player.GetComponent<PlayerMovement>().canIn)) {
+                player.transform.Translate(-playerVec.normalized * Mathf.Clamp(dist * scaleFactor,-0.2f,0.2f));
+                if (Vector2.Angle(player.transform.position - transform.position,playerVec) > 90) {
+                    player.transform.localScale *= -(player.transform.position - transform.position).magnitude/playerVec.magnitude;
+                    Vector3 scaler = player.transform.localScale;
+                    scaler.x *= -1;
+                    player.transform.localScale = scaler;
+                } else {
+                    player.transform.localScale *= (player.transform.position - transform.position).magnitude/playerVec.magnitude;
+                }
             }
+            
             prevPosition = Input.mousePosition;
         }
     }
