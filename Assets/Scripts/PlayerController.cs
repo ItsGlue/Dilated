@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     private bool facingRight = true;
     public ParticleSystem dust;
     private bool controlEnabled;
+    private static int currLevel;
 
     public Animator squashStretchAnimator;
 
@@ -26,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         controlEnabled = true;
         resetPosition = Vector2.zero;
+        currLevel = SceneManager.GetActiveScene().buildIndex + 1;
+        Debug.Log(currLevel);
     }
 
     private void Update()
@@ -53,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
             playDust();
         }
         if (Input.GetKeyDown("r")) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Reset();
             // transform.position = resetPosition;
             // if (!facingRight) {
             //     transform.localScale = new Vector3(-1,1,1);
@@ -61,6 +65,10 @@ public class PlayerMovement : MonoBehaviour
             //     transform.localScale = Vector3.one;
             // }
             // rb.velocity = Vector2.zero;
+        }
+        Vector3 viewportPos = Camera.main.WorldToViewportPoint(transform.position);
+        if (viewportPos.x < 0 || viewportPos.x > 1 || viewportPos.y < 0 || viewportPos.y > 1) {
+            Reset();
         }
     }
 
@@ -103,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Danger"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Reset();
         }
         if (!currScalePoint) return;
         if (direction) {
@@ -112,9 +120,22 @@ public class PlayerMovement : MonoBehaviour
             canOut = false;
         }
     }
-
     void OnCollisionExit2D(Collision2D other) {
         canOut = true;
         canIn = true;
+    }
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.CompareTag("End")) {
+            End();
+        }
+    }
+    void Reset() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    void End() {
+        //play animations?
+        currLevel++;
+        Debug.Log("loading level " + currLevel);
+        SceneManager.LoadScene(currLevel - 1);
     }
 }

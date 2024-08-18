@@ -50,7 +50,6 @@ public class ScalePoint : MonoBehaviour
             player.AddComponent<SliderJoint2D>();
             player.GetComponent<Joint2D>().connectedBody = gameObject.GetComponent<Rigidbody2D>();
             ratio = player.transform.localScale.magnitude / (player.transform.position - transform.position).magnitude;
-            Debug.Log(ratio);
         }
         if (Input.GetMouseButtonUp(0) && scaling) {
             player.GetComponent<Rigidbody2D>().gravityScale = player.transform.localScale.y;
