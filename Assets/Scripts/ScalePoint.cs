@@ -15,6 +15,7 @@ public class ScalePoint : MonoBehaviour
 
     private Vector2 mouse;
     private Vector2 playerVec;
+    private float ratio;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +37,8 @@ public class ScalePoint : MonoBehaviour
             player.GetComponent<PlayerMovement>().currScalePoint = gameObject;
             player.AddComponent<SliderJoint2D>();
             player.GetComponent<Joint2D>().connectedBody = gameObject.GetComponent<Rigidbody2D>();
+            ratio = player.transform.localScale.magnitude / (player.transform.position - transform.position).magnitude;
+            Debug.Log(ratio);
         }
         if (Input.GetMouseButtonUp(0) && scaling) {
             player.GetComponent<Rigidbody2D>().gravityScale = player.transform.localScale.y;
@@ -56,13 +59,15 @@ public class ScalePoint : MonoBehaviour
             }
             if ((dist > 0 || player.GetComponent<PlayerMovement>().canOut) && (dist < 0 || player.GetComponent<PlayerMovement>().canIn)) {
                 player.transform.Translate(-playerVec.normalized * Mathf.Clamp(dist * scaleFactor,-0.2f,0.2f));
+                player.transform.localScale = player.transform.localScale.normalized * ratio * (player.transform.position - transform.position).magnitude;
                 if (Vector2.Angle(player.transform.position - transform.position,playerVec) > 90) {
-                    player.transform.localScale *= -(player.transform.position - transform.position).magnitude/playerVec.magnitude;
+                    //player.transform.localScale *= -(player.transform.position - transform.position).magnitude/playerVec.magnitude;
                     Vector3 scaler = player.transform.localScale;
-                    scaler.x *= -1;
+                    scaler.y *= -1;
+                    scaler.z *= -1;
                     player.transform.localScale = scaler;
                 } else {
-                    player.transform.localScale *= (player.transform.position - transform.position).magnitude/playerVec.magnitude;
+                    //player.transform.localScale *= (player.transform.position - transform.position).magnitude/playerVec.magnitude;
                 }
             }
             
