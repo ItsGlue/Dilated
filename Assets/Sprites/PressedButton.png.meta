@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 21ae5fb04077048bba2d1fd054c47296
+guid: 829915e4c7c624ec092751b42b869846
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6134751039864755284
-    second: RedButton_0
+      213: 7700382695247376890
+    second: PressedButton_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,22 +126,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RedButton_0
+      name: PressedButton_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 16
-        height: 5
-      alignment: 9
-      pivot: {x: 0.5, y: 3}
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 454d8944193032550800000000000000
-      internalID: 6134751039864755284
+      spriteID: af1f8c053414dda60800000000000000
+      internalID: 7700382695247376890
       vertices: []
       indices: 
       edges: []
@@ -149,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6f9504ca92e9d4795b783cdc62242970
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -157,7 +157,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RedButton_0: 6134751039864755284
+      PressedButton_0: 7700382695247376890
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
