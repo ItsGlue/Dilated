@@ -65,16 +65,21 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private bool IsGrounded()
-    {
-        raycastDistance = 0.5f * transform.localScale.y;
-        Vector2 originLeft = new Vector2(transform.position.x - transform.localScale.x / 2, transform.position.y);
-        Vector2 originCenter = new Vector2(transform.position.x, transform.position.y);
-        Vector2 originRight = new Vector2(transform.position.x + transform.localScale.x / 2, transform.position.y);
-        RaycastHit2D hitLeft = Physics2D.Raycast(originLeft, Vector2.down, raycastDistance, groundLayer);
-        RaycastHit2D hitCenter = Physics2D.Raycast(originCenter, Vector2.down, raycastDistance, groundLayer);
-        RaycastHit2D hitRight = Physics2D.Raycast(originRight, Vector2.down, raycastDistance, groundLayer);
-        return hitLeft.collider != null || hitCenter.collider != null || hitRight.collider != null;
-    }
+{
+    raycastDistance = 0.5f * transform.localScale.y;
+    Vector2 originLeft = new Vector2(transform.position.x - transform.localScale.x / 2, transform.position.y);
+    Vector2 originCenter = new Vector2(transform.position.x, transform.position.y);
+    Vector2 originRight = new Vector2(transform.position.x + transform.localScale.x / 2, transform.position.y);
+    RaycastHit2D hitLeft = Physics2D.Raycast(originLeft, Vector2.down, raycastDistance, groundLayer);
+    RaycastHit2D hitCenter = Physics2D.Raycast(originCenter, Vector2.down, raycastDistance, groundLayer);
+    RaycastHit2D hitRight = Physics2D.Raycast(originRight, Vector2.down, raycastDistance, groundLayer);
+
+    Debug.DrawRay(originLeft, Vector2.down * raycastDistance, Color.red);
+    Debug.DrawRay(originCenter, Vector2.down * raycastDistance, Color.red);
+    Debug.DrawRay(originRight, Vector2.down * raycastDistance, Color.red);
+
+    return hitLeft.collider != null || hitCenter.collider != null || hitRight.collider != null;
+}
 
 
     private void Flip()
