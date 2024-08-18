@@ -6,7 +6,6 @@ public class ScalePoint : MonoBehaviour
 {
     private CircleCollider2D col;
 
-    [SerializeField]
     private GameObject player;
 
     private Vector2 savedVelocity;
@@ -21,6 +20,7 @@ public class ScalePoint : MonoBehaviour
     {
         col = GetComponent<CircleCollider2D>();
         scaling = false;
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -34,7 +34,8 @@ public class ScalePoint : MonoBehaviour
             scaling = true;
             prevPosition = Input.mousePosition;
             player.GetComponent<PlayerMovement>().currScalePoint = gameObject;
-            player.AddComponent<SliderJoint2D>().connectedBody = GetComponent<Rigidbody2D>();
+            player.AddComponent<SliderJoint2D>();
+            player.GetComponent<Joint2D>().connectedBody = gameObject.GetComponent<Rigidbody2D>();
         }
         if (Input.GetMouseButtonUp(0) && scaling) {
             player.GetComponent<Rigidbody2D>().gravityScale = player.transform.localScale.y;
@@ -48,6 +49,11 @@ public class ScalePoint : MonoBehaviour
             mouse = Input.mousePosition - prevPosition;
             playerVec = player.transform.position - transform.position;
             float dist = mouse.magnitude * Mathf.Cos(Vector2.Angle(mouse, playerVec) * Mathf.Deg2Rad);
+            if (dist > 0) {
+                player.GetComponent<PlayerMovement>().direction = true;
+            } else if (dist < 0){
+                player.GetComponent<PlayerMovement>().direction = false;
+            }
             if ((dist > 0 || player.GetComponent<PlayerMovement>().canOut) && (dist < 0 || player.GetComponent<PlayerMovement>().canIn)) {
                 player.transform.Translate(-playerVec.normalized * Mathf.Clamp(dist * scaleFactor,-0.2f,0.2f));
                 if (Vector2.Angle(player.transform.position - transform.position,playerVec) > 90) {

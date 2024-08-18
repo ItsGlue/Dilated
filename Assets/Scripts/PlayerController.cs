@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject currScalePoint;
     public bool canOut = true;
     public bool canIn = true;
+    public bool direction;
 
     private Rigidbody2D rb;
     private bool isGrounded;
@@ -82,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
     public void playDust() {
         dust.Play();   
     }
-    private void Control(bool enable) {
+    public void Control(bool enable) {
         controlEnabled = enable;
     }
 
@@ -99,8 +100,7 @@ public class PlayerMovement : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         if (!currScalePoint) return;
-        Vector2 normal = collision.GetContact(0).normal;
-        if (Vector2.Angle(normal, transform.position - currScalePoint.transform.position) < 90) {
+        if (direction) {
             canIn = false;
         } else {
             canOut = false;
