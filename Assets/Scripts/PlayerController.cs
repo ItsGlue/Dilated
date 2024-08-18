@@ -98,13 +98,13 @@ public class PlayerMovement : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-        // if (!currScalePoint) return;
-        // Vector2 normal = other.GetContact(0).normal;
-        // if (Vector2.Angle(normal, transform.position - currScalePoint.transform.position) < 90) {
-        //     canIn = false;
-        // } else {
-        //     canOut = false;
-        // }
+        if (!currScalePoint) return;
+        Vector2 normal = collision.GetContact(0).normal;
+        if (Vector2.Angle(normal, transform.position - currScalePoint.transform.position) < 90) {
+            canIn = false;
+        } else {
+            canOut = false;
+        }
     }
 
     void OnCollisionExit2D(Collision2D other) {
