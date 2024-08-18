@@ -18,6 +18,7 @@ public class ScalePoint : MonoBehaviour
     private float ratio;
     public Sprite Active;
     public Sprite Inactive;
+    public bool state;
 
     // Reference to the SpriteRenderer component of the GameObject
     private SpriteRenderer spriteRenderer;
@@ -28,12 +29,17 @@ public class ScalePoint : MonoBehaviour
         scaling = false;
         player = GameObject.Find("Player");
         spriteRenderer = GetComponent<SpriteRenderer>();
+        if (state) {
+            spriteRenderer.sprite = Active;
+        } else {
+            spriteRenderer.sprite = Inactive;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && col.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition))) {
+        if (Input.GetMouseButtonDown(0) && col.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition)) && state) {
             player.GetComponent<Rigidbody2D>().gravityScale = 0;
             savedVelocity = player.GetComponent<Rigidbody2D>().velocity;
             player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
@@ -65,7 +71,7 @@ public class ScalePoint : MonoBehaviour
             }
             if ((dist > 0 || player.GetComponent<PlayerMovement>().canOut) && (dist < 0 || player.GetComponent<PlayerMovement>().canIn)) {
                 player.transform.Translate(-playerVec.normalized * Mathf.Clamp(dist * scaleFactor,-0.2f,0.2f));
-                player.transform.localScale = player.transform.localScale.normalized * ratio * (player.transform.position - transform.position).magnitude;
+                player.transform.localScale = player.transform.localScale.normalized * Mathf.Clamp(ratio * (player.transform.position - transform.position).magnitude,0.5f,15f);
                 if (Vector2.Angle(player.transform.position - transform.position,playerVec) > 90) {
                     //player.transform.localScale *= -(player.transform.position - transform.position).magnitude/playerVec.magnitude;
                     Vector3 scaler = player.transform.localScale;
@@ -84,6 +90,7 @@ public class ScalePoint : MonoBehaviour
     public void ActiveSprite()
     {
         spriteRenderer.sprite = Active;
+        state = true;
     }
     public void InactiveSprite()
     {
@@ -92,6 +99,7 @@ public class ScalePoint : MonoBehaviour
         } else
         {
             spriteRenderer.sprite = Inactive;
+            state = false;
         }
     }
 
@@ -99,6 +107,7 @@ public class ScalePoint : MonoBehaviour
     {
         yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
         spriteRenderer.sprite = Inactive;
+        state = false;
     }
 
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8084132753651075919}
   - component: {fileID: 5124857895487024952}
   - component: {fileID: 1540956720544462777}
+  - component: {fileID: 209692029693663188}
   m_Layer: 0
   m_Name: Scale Point
   m_TagString: Untagged
@@ -137,6 +138,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd28f7d99c134763a458bb9fa2d3cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Active: {fileID: 21300000, guid: 9b824d5cf779841b48922a8976ab85b8, type: 3}
+  Inactive: {fileID: 21300000, guid: 6ba76fc4739eb4ed4a5d566eeb741788, type: 3}
+  state: 0
 --- !u!50 &1540956720544462777
 Rigidbody2D:
   serializedVersion: 4
@@ -164,3 +168,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &209692029693663188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6006774558826457431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8fcc4ac723004902ba6d8fdd3d09717, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverRotationSpeed: 90
+  clickRotationSpeed: 180
+  alignRotationSpeed: 180
