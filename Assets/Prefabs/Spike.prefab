@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3547398633626140587}
   - component: {fileID: 3291818467426697439}
-  - component: {fileID: 8535718091063185315}
+  - component: {fileID: -5561849875932131446}
   m_Layer: 0
   m_Name: Spike
   m_TagString: Danger
@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.33, y: -3.55, z: -0.05752631}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7ff9ece1f5b124e7692a0e175b5ab112, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 47cbee9890fc04bdbb614a4f9e9a5c18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,8 +87,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &8535718091063185315
-PolygonCollider2D:
+--- !u!61 &-5561849875932131446
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -131,12 +131,5 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.1374762, y: 0.20649862}
-      - {x: -0.26037908, y: -0.021324635}
-      - {x: -0.5, y: -0.5}
-      - {x: 0.5, y: -0.5}
-      - {x: 0.27824306, y: -0.082066774}
-      - {x: 0.004877329, y: 0.4478221}
-  m_UseDelaunayMesh: 0
+  m_Size: {x: 0.0001, y: 0.0001}
+  m_EdgeRadius: 0
