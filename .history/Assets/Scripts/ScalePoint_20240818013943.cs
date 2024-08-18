@@ -83,22 +83,20 @@ public class ScalePoint : MonoBehaviour
 
     public void ActiveSprite()
     {
-        spriteRenderer.sprite = Active;
+            spriteRenderer.sprite = Active;
     }
     public void InactiveSprite()
     {
-        if (Input.GetMouseButton(0)) {
-            StartCoroutine(WaitUntilMouseUp());
-        } else
-        {
+        if (Input.GetMouseButtonDown(0)) {
+            StartCoroutine(WaitUntilFalse());
             spriteRenderer.sprite = Inactive;
+        } else {
+            //spriteRenderer.sprite = Inactive;
         }
     }
 
-    IEnumerator WaitUntilMouseUp()
+    IEnumerator WaitUntilFalse()
     {
         yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
-        spriteRenderer.sprite = Inactive;
     }
-
 }

@@ -8,13 +8,13 @@ public class ButtonScript : MonoBehaviour
     private SpriteRenderer parentSpriteRenderer;
     private bool isPressed = false;
     public GameObject ScalePoint;
-    private ScalePoint scaleScript;
+    private ScaleScript scaleScript;
 
     void Start()
     {
         parentSpriteRenderer = GetComponentInParent<SpriteRenderer>();
         parentSpriteRenderer.sprite = notPressedSprite;
-        scaleScript = ScalePoint.GetComponent<ScalePoint>();
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -23,7 +23,6 @@ public class ButtonScript : MonoBehaviour
         {
             parentSpriteRenderer.sprite = pressedSprite;
             isPressed = true;
-            scaleScript.ActiveSprite();
         }
     }
 
@@ -33,7 +32,6 @@ public class ButtonScript : MonoBehaviour
         {
             parentSpriteRenderer.sprite = notPressedSprite;
             isPressed = false;
-            scaleScript.InactiveSprite();
         }
     }
 

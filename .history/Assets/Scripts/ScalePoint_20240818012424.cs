@@ -17,7 +17,7 @@ public class ScalePoint : MonoBehaviour
     private Vector2 playerVec;
     private float ratio;
     public Sprite Active;
-    public Sprite Inactive;
+    public Sprite InActive;
 
     // Reference to the SpriteRenderer component of the GameObject
     private SpriteRenderer spriteRenderer;
@@ -83,22 +83,6 @@ public class ScalePoint : MonoBehaviour
 
     public void ActiveSprite()
     {
-        spriteRenderer.sprite = Active;
+        spriteRenderer.sprite = newSprite;
     }
-    public void InactiveSprite()
-    {
-        if (Input.GetMouseButton(0)) {
-            StartCoroutine(WaitUntilMouseUp());
-        } else
-        {
-            spriteRenderer.sprite = Inactive;
-        }
-    }
-
-    IEnumerator WaitUntilMouseUp()
-    {
-        yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
-        spriteRenderer.sprite = Inactive;
-    }
-
 }

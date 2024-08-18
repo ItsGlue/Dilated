@@ -16,18 +16,12 @@ public class ScalePoint : MonoBehaviour
     private Vector2 mouse;
     private Vector2 playerVec;
     private float ratio;
-    public Sprite Active;
-    public Sprite Inactive;
-
-    // Reference to the SpriteRenderer component of the GameObject
-    private SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
     void Start()
     {
         col = GetComponent<CircleCollider2D>();
         scaling = false;
         player = GameObject.Find("Player");
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -80,25 +74,4 @@ public class ScalePoint : MonoBehaviour
             prevPosition = Input.mousePosition;
         }
     }
-
-    public void ActiveSprite()
-    {
-        spriteRenderer.sprite = Active;
-    }
-    public void InactiveSprite()
-    {
-        if (Input.GetMouseButton(0)) {
-            StartCoroutine(WaitUntilMouseUp());
-        } else
-        {
-            spriteRenderer.sprite = Inactive;
-        }
-    }
-
-    IEnumerator WaitUntilMouseUp()
-    {
-        yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
-        spriteRenderer.sprite = Inactive;
-    }
-
 }

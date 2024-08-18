@@ -33,7 +33,7 @@ public class ButtonScript : MonoBehaviour
         {
             parentSpriteRenderer.sprite = notPressedSprite;
             isPressed = false;
-            scaleScript.InactiveSprite();
+            scaleScript.ActiveSprite();
         }
     }
 

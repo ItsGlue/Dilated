@@ -23,7 +23,6 @@ public class ButtonScript : MonoBehaviour
         {
             parentSpriteRenderer.sprite = pressedSprite;
             isPressed = true;
-            scaleScript.ActiveSprite();
         }
     }
 
@@ -33,7 +32,6 @@ public class ButtonScript : MonoBehaviour
         {
             parentSpriteRenderer.sprite = notPressedSprite;
             isPressed = false;
-            scaleScript.InactiveSprite();
         }
     }
 

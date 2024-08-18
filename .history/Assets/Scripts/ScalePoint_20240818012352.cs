@@ -17,7 +17,7 @@ public class ScalePoint : MonoBehaviour
     private Vector2 playerVec;
     private float ratio;
     public Sprite Active;
-    public Sprite Inactive;
+    public Sprite InActive;
 
     // Reference to the SpriteRenderer component of the GameObject
     private SpriteRenderer spriteRenderer;
@@ -81,24 +81,15 @@ public class ScalePoint : MonoBehaviour
         }
     }
 
-    public void ActiveSprite()
+    public void ChangeSprite()
     {
-        spriteRenderer.sprite = Active;
-    }
-    public void InactiveSprite()
-    {
-        if (Input.GetMouseButton(0)) {
-            StartCoroutine(WaitUntilMouseUp());
-        } else
+        if (spriteRenderer != null && newSprite != null)
         {
-            spriteRenderer.sprite = Inactive;
+            spriteRenderer.sprite = newSprite;
+        }
+        else
+        {
+            Debug.LogWarning("SpriteRenderer or newSprite is not assigned.");
         }
     }
-
-    IEnumerator WaitUntilMouseUp()
-    {
-        yield return new WaitUntil(() => Input.GetMouseButtonUp(0));
-        spriteRenderer.sprite = Inactive;
-    }
-
 }
