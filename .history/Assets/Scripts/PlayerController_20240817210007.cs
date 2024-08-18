@@ -52,7 +52,6 @@ public class PlayerMovement : MonoBehaviour
             playDust();
         }
         if (Input.GetKeyDown("r")) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             // transform.position = resetPosition;
             // if (!facingRight) {
             //     transform.localScale = new Vector3(-1,1,1);
