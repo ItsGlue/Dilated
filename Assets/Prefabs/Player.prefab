@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6373451201933989508}
   - component: {fileID: 1518945641218439214}
   - component: {fileID: 1234027861569043099}
-  - component: {fileID: 2185429714115585281}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -189,33 +188,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.75, y: 0.7}
   m_EdgeRadius: 0
---- !u!234 &2185429714115585281
-SliderJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5757968249797569519}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_BreakAction: 3
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureAngle: 1
-  m_Angle: 0
-  m_UseMotor: 0
-  m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
-  m_UseLimits: 0
-  m_TranslationLimits:
-    m_LowerTranslation: 0
-    m_UpperTranslation: 0
 --- !u!1001 &8445325759746432431
 PrefabInstance:
   m_ObjectHideFlags: 0
