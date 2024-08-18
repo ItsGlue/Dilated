@@ -29,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
         controlEnabled = true;
         resetPosition = Vector2.zero;
         currLevel = SceneManager.GetActiveScene().buildIndex + 1;
-        Debug.Log(currLevel);
     }
 
     private void Update()
@@ -135,7 +134,6 @@ public class PlayerMovement : MonoBehaviour
     void End() {
         //play animations?
         currLevel++;
-        Debug.Log("loading level " + currLevel);
         SceneManager.LoadScene(currLevel - 1);
     }
 }
