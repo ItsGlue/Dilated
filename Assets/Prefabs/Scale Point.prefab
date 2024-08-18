@@ -119,7 +119,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -137,7 +137,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd28f7d99c134763a458bb9fa2d3cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 5757968249797569519, guid: a92d0ea694f0a435abeccf57bf7c292c, type: 3}
 --- !u!50 &1540956720544462777
 Rigidbody2D:
   serializedVersion: 4
