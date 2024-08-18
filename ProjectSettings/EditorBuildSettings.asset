@@ -26,5 +26,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scaling2.unity
     guid: ab84a5879450444afb2ac5e37752d8a4
+  - enabled: 1
+    path: Assets/Scenes/Button1.unity
+    guid: 45dd8fe6b48234816a12e67e2a71b0a8
+  - enabled: 1
+    path: Assets/Scenes/Button2.unity
+    guid: 4c2330b68a1834b07a8d7c7facfdd68f
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
