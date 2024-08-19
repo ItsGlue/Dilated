@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         controlEnabled = true;
         resetPosition = Vector2.zero;
-        currLevel = SceneManager.GetActiveScene().buildIndex + 1;
+        currLevel = SceneManager.GetActiveScene().buildIndex - 1;
     }
 
     private void Update()
@@ -134,6 +134,9 @@ public class PlayerMovement : MonoBehaviour
     void End() {
         //play animations?
         currLevel++;
-        SceneManager.LoadScene(currLevel - 1);
+        if (currLevel > PlayerPrefs.GetInt("maxlevel")) {
+            PlayerPrefs.SetInt("maxlevel", currLevel);
+        }
+        SceneManager.LoadScene(currLevel + 1);
     }
 }
