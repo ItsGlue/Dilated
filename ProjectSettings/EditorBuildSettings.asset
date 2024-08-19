@@ -41,5 +41,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gravity1.unity
     guid: de418ca60e67a46689fdea7c40011afa
+  - enabled: 1
+    path: Assets/Scenes/Gravity2.unity
+    guid: 6529a33ed662241f580ad0ee45fb51bd
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
