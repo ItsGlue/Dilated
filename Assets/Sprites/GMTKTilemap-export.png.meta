@@ -1157,6 +1157,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: GMTKTilemap-export_49
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d6b6bde53fb14c1e9115cb630d2f09b
+      internalID: 946027413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GMTKTilemap-export_50
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff58912d4c8c46979860f22d84e60d5
+      internalID: -1859884816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GMTKTilemap-export_51
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1566275ffd478446ca942d039ba4be53
+      internalID: -614701113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GMTKTilemap-export_52
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bde56ebcba334c8ea6e051d5294c9be
+      internalID: -188325110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1212,7 +1296,11 @@ TextureImporter:
       GMTKTilemap-export_46: 160515946
       GMTKTilemap-export_47: 1133299551
       GMTKTilemap-export_48: -255023825
+      GMTKTilemap-export_49: 946027413
       GMTKTilemap-export_5: 1963847728
+      GMTKTilemap-export_50: -1859884816
+      GMTKTilemap-export_51: -614701113
+      GMTKTilemap-export_52: -188325110
       GMTKTilemap-export_6: 967222179
       GMTKTilemap-export_7: 36753799
       GMTKTilemap-export_8: -1872721408
