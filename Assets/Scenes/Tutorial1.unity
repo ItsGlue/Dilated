@@ -152,7 +152,6 @@ MonoBehaviour:
   audioSource: {fileID: 655342990}
   songs:
   - {fileID: 8300000, guid: 4b57bccafaf8c4dff8bc1213642c98ab, type: 3}
-  - {fileID: 8300000, guid: 96334e37cbd224636b4af603d07f1ecb, type: 3}
   - {fileID: 8300000, guid: 5575cb7e345fc42719e259bea6887c96, type: 3}
 --- !u!82 &655342990
 AudioSource:

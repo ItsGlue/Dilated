@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3547398633626140587}
   - component: {fileID: 3291818467426697439}
-  - component: {fileID: -5561849875932131446}
+  - component: {fileID: 4555077541414510596}
   m_Layer: 0
   m_Name: Spike
   m_TagString: Danger
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3541727262466566001}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.33, y: -3.55, z: -0.05752631}
+  m_LocalPosition: {x: 3.375, y: -3.408, z: -0.05752631}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &-5561849875932131446
+--- !u!61 &4555077541414510596
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,7 +121,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.3093425}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -131,5 +131,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.0001, y: 0.0001}
+  m_Size: {x: 1, y: 0.381315}
   m_EdgeRadius: 0

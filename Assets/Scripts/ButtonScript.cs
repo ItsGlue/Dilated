@@ -22,6 +22,8 @@ public class ButtonScript : MonoBehaviour
         if (parentSpriteRenderer != null)
         {
             parentSpriteRenderer.sprite = pressedSprite;
+            //sfx
+            AudioManager.Instance.PlaySFX("Button");
             isPressed = true;
             scaleScript.ActiveSprite();
         }
