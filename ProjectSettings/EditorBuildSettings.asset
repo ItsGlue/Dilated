@@ -32,5 +32,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Button2.unity
     guid: 4c2330b68a1834b07a8d7c7facfdd68f
+  - enabled: 1
+    path: Assets/Scenes/Button3.unity
+    guid: facf2f4b18d644f4bbc40740ef11283f
+  - enabled: 1
+    path: Assets/Scenes/Gravity1.unity
+    guid: de418ca60e67a46689fdea7c40011afa
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
