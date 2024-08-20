@@ -62,5 +62,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/New Level 2 [Vince].unity
     guid: cd72c3bb59e6d44f7b209548a2c2a07f
+  - enabled: 1
+    path: Assets/Scenes/New Level 3 [Vince].unity
+    guid: 92d20d3f987cb41eeb9fd54c6755627b
+  - enabled: 1
+    path: Assets/Scenes/New Level 4 [Vince].unity
+    guid: b15f6eac070c54a57925b16c84a11d4a
+  - enabled: 1
+    path: Assets/Scenes/New Level [rick].unity
+    guid: 3896cef8aac4741728af30f5375f76d8
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
