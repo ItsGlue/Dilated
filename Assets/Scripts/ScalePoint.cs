@@ -106,6 +106,12 @@ public class ScalePoint : MonoBehaviour
         }
     }
 
+    public bool CurrentState()
+    {
+        return state;
+    }
+
+
     IEnumerator WaitUntilMouseUp()
     {
         yield return new WaitUntil(() => Input.GetMouseButtonUp(0));

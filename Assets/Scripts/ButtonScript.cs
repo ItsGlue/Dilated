@@ -12,6 +12,7 @@ public class ButtonScript : MonoBehaviour
     private ScalePoint scaleScript;
 
     private int colliderCount = 0;
+    private bool alreadyOn = false;
 
     void Start()
     {
@@ -52,15 +53,28 @@ public class ButtonScript : MonoBehaviour
     {
         if (pressed)
         {
+            if(scaleScript.CurrentState())
+            {
+                alreadyOn = true;
+            }
             parentSpriteRenderer.sprite = pressedSprite;
             scaleScript.ActiveSprite();
             isPressed = true;
         }
         else
         {
-            parentSpriteRenderer.sprite = notPressedSprite;
-            scaleScript.InactiveSprite();
-            isPressed = false;
+            if (alreadyOn)
+            {
+                alreadyOn = false;
+                parentSpriteRenderer.sprite = notPressedSprite;
+                isPressed = false;
+            }
+            else
+            {
+                parentSpriteRenderer.sprite = notPressedSprite;
+                scaleScript.InactiveSprite();
+                isPressed = false;
+            }
         }
     }
 
