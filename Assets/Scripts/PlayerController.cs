@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public ParticleSystem dust;
     private bool controlEnabled;
     private static int currLevel;
+    private bool canJump;
 
     public Animator squashStretchAnimator;
 
@@ -29,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
         controlEnabled = true;
         resetPosition = Vector2.zero;
         currLevel = SceneManager.GetActiveScene().buildIndex - 1;
+        canJump = false;
     }
 
     private void Update()
@@ -73,14 +75,15 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsGrounded()
     {
-        raycastDistance = 0.5f * transform.localScale.y;
-        Vector2 originLeft = new Vector2(transform.position.x - transform.localScale.x / 2, transform.position.y);
-        Vector2 originCenter = new Vector2(transform.position.x, transform.position.y);
-        Vector2 originRight = new Vector2(transform.position.x + transform.localScale.x / 2, transform.position.y);
-        RaycastHit2D hitLeft = Physics2D.Raycast(originLeft, Vector2.down, raycastDistance, groundLayer);
-        RaycastHit2D hitCenter = Physics2D.Raycast(originCenter, Vector2.down, raycastDistance, groundLayer);
-        RaycastHit2D hitRight = Physics2D.Raycast(originRight, Vector2.down, raycastDistance, groundLayer);
-        return hitLeft.collider != null || hitCenter.collider != null || hitRight.collider != null;
+        // raycastDistance = 0.5f * transform.localScale.y;
+        // Vector2 originLeft = new Vector2(transform.position.x - transform.localScale.x / 2, transform.position.y);
+        // Vector2 originCenter = new Vector2(transform.position.x, transform.position.y);
+        // Vector2 originRight = new Vector2(transform.position.x + transform.localScale.x / 2, transform.position.y);
+        // RaycastHit2D hitLeft = Physics2D.Raycast(originLeft, Vector2.down, raycastDistance, groundLayer);
+        // RaycastHit2D hitCenter = Physics2D.Raycast(originCenter, Vector2.down, raycastDistance, groundLayer);
+        // RaycastHit2D hitRight = Physics2D.Raycast(originRight, Vector2.down, raycastDistance, groundLayer);
+        // return hitLeft.collider != null || hitCenter.collider != null || hitRight.collider != null;
+        return canJump;
     }
 
 
@@ -138,5 +141,8 @@ public class PlayerMovement : MonoBehaviour
             PlayerPrefs.SetInt("maxlevel", currLevel);
         }
         SceneManager.LoadScene(currLevel + 1);
+    }
+    public void AllowJump(bool allow) {
+        canJump = allow;
     }
 }
