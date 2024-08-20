@@ -142,7 +142,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e59c9cb9aea342099a29f6cdbf9f062, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 1289133380418031390}
-  songs:
-  - {fileID: 8300000, guid: 4b57bccafaf8c4dff8bc1213642c98ab, type: 3}
-  - {fileID: 8300000, guid: 5575cb7e345fc42719e259bea6887c96, type: 3}
+  songNames:
+  - AppleTree
+  - WoodenTable

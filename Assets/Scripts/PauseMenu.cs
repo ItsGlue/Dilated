@@ -1,13 +1,18 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI; 
     private bool isPaused = false;
 
+    void Start() {
+        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(GameObject.Find("EventSystem"));
+    }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) /*&& SceneManager.GetActiveScene().buildIndex >= 2*/)
         {
             if (isPaused)
             {
