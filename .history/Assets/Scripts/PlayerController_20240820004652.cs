@@ -113,12 +113,10 @@ public class PlayerMovement : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Danger"))
         {
-            //sfx
-            AudioManager.Instance.PlaySFX("Death");
             Reset();
         }
         if (!currScalePoint) return;
-        if (direction) {    
+        if (direction) {
             canIn = false;
         } else {
             canOut = false;
