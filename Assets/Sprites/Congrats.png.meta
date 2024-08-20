@@ -1,0 +1,865 @@
+fileFormatVersion: 2
+guid: 31aae4efff7a94e5fba3b0eda5e94dfd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8977413830798906838
+    second: Congrats_0
+  - first:
+      213: 4668641674209418492
+    second: Congrats_1
+  - first:
+      213: 6910553086292729845
+    second: Congrats_2
+  - first:
+      213: 8690709627850828684
+    second: Congrats_3
+  - first:
+      213: 4370958128624693948
+    second: Congrats_4
+  - first:
+      213: -13268728643514621
+    second: Congrats_5
+  - first:
+      213: -8883171324006635605
+    second: Congrats_6
+  - first:
+      213: 1095246691437181420
+    second: Congrats_7
+  - first:
+      213: -4609302622720079322
+    second: Congrats_8
+  - first:
+      213: -8434325339856647886
+    second: Congrats_9
+  - first:
+      213: -6777953171034640121
+    second: Congrats_10
+  - first:
+      213: 6219526479544372792
+    second: Congrats_11
+  - first:
+      213: -513386280058094274
+    second: Congrats_12
+  - first:
+      213: -4245514189907278718
+    second: Congrats_13
+  - first:
+      213: 8658379754399553969
+    second: Congrats_14
+  - first:
+      213: -3170744694670554189
+    second: Congrats_15
+  - first:
+      213: -4245073372799607219
+    second: Congrats_16
+  - first:
+      213: 89226022268665354
+    second: Congrats_17
+  - first:
+      213: 4262315661990973011
+    second: Congrats_18
+  - first:
+      213: -5780017037982071923
+    second: Congrats_19
+  - first:
+      213: 2739596370292061195
+    second: Congrats_20
+  - first:
+      213: 8115712619515944686
+    second: Congrats_21
+  - first:
+      213: 912139843531172747
+    second: Congrats_22
+  - first:
+      213: 5502679215188334597
+    second: Congrats_23
+  - first:
+      213: -7271154326970291652
+    second: Congrats_24
+  - first:
+      213: 6224575450668756550
+    second: Congrats_25
+  - first:
+      213: -2907094347248738791
+    second: Congrats_26
+  - first:
+      213: -4376245538974869030
+    second: Congrats_27
+  - first:
+      213: -2434038501896310709
+    second: Congrats_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Congrats_0
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 201
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d59272905e269c70800000000000000
+      internalID: 8977413830798906838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_1
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 186
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfc56defdd85ac040800000000000000
+      internalID: 4668641674209418492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_2
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 201
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ff15f51b6737ef50800000000000000
+      internalID: 6910553086292729845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_3
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 203
+        width: 37
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8bad167c5a9b9870800000000000000
+      internalID: 8690709627850828684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_4
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 199
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb2f7c87243c8ac30800000000000000
+      internalID: 4370958128624693948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_5
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 219
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30f059e592cd0dff0800000000000000
+      internalID: -13268728643514621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_6
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 218
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba7e5a1feb2a8b480800000000000000
+      internalID: -8883171324006635605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_7
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 200
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce9f8802019133f00800000000000000
+      internalID: 1095246691437181420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_8
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 201
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62a4e7e8fa77800c0800000000000000
+      internalID: -4609302622720079322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_9
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 199
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 239c4c55ac143fa80800000000000000
+      internalID: -8434325339856647886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_10
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 196
+        width: 53
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7017f38808fdfe1a0800000000000000
+      internalID: -6777953171034640121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_11
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 147
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83ec0647162305650800000000000000
+      internalID: 6219526479544372792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_12
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 146
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3df398f5e510e8f0800000000000000
+      internalID: -513386280058094274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_13
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 143
+        width: 21
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28442b58657e415c0800000000000000
+      internalID: -4245514189907278718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_14
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 142
+        width: 12
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b95b67338eb82870800000000000000
+      internalID: 8658379754399553969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_15
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 169
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bb05b0ef704ff3d0800000000000000
+      internalID: -3170744694670554189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_16
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 148
+        width: 8
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4e5fc042487615c0800000000000000
+      internalID: -4245073372799607219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_17
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 143
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0e7b02389efc3100800000000000000
+      internalID: 89226022268665354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_18
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 145
+        width: 25
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35e4e890389c62b30800000000000000
+      internalID: 4262315661990973011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_19
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 145
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d838f57b02149cfa0800000000000000
+      internalID: -5780017037982071923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_20
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 146
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b04353f3260050620800000000000000
+      internalID: 2739596370292061195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_21
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 145
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eee1769e0adc0a070800000000000000
+      internalID: 8115712619515944686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_22
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 148
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8be72fda5298ac00800000000000000
+      internalID: 912139843531172747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_23
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 149
+        width: 25
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 508d93e77917d5c40800000000000000
+      internalID: 5502679215188334597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_24
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 138
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3a24e1f9aba71b90800000000000000
+      internalID: -7271154326970291652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_25
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 131
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64e6ab6a462226650800000000000000
+      internalID: 6224575450668756550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_26
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 146
+        width: 8
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91e51b7f71de7a7d0800000000000000
+      internalID: -2907094347248738791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_27
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 127
+        width: 43
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad9d38f5ed37443c0800000000000000
+      internalID: -4376245538974869030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Congrats_28
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 132
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b40b8dce0ee883ed0800000000000000
+      internalID: -2434038501896310709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Congrats_0: 8977413830798906838
+      Congrats_1: 4668641674209418492
+      Congrats_10: -6777953171034640121
+      Congrats_11: 6219526479544372792
+      Congrats_12: -513386280058094274
+      Congrats_13: -4245514189907278718
+      Congrats_14: 8658379754399553969
+      Congrats_15: -3170744694670554189
+      Congrats_16: -4245073372799607219
+      Congrats_17: 89226022268665354
+      Congrats_18: 4262315661990973011
+      Congrats_19: -5780017037982071923
+      Congrats_2: 6910553086292729845
+      Congrats_20: 2739596370292061195
+      Congrats_21: 8115712619515944686
+      Congrats_22: 912139843531172747
+      Congrats_23: 5502679215188334597
+      Congrats_24: -7271154326970291652
+      Congrats_25: 6224575450668756550
+      Congrats_26: -2907094347248738791
+      Congrats_27: -4376245538974869030
+      Congrats_28: -2434038501896310709
+      Congrats_3: 8690709627850828684
+      Congrats_4: 4370958128624693948
+      Congrats_5: -13268728643514621
+      Congrats_6: -8883171324006635605
+      Congrats_7: 1095246691437181420
+      Congrats_8: -4609302622720079322
+      Congrats_9: -8434325339856647886
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

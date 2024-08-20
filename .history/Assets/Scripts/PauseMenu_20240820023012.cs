@@ -23,27 +23,26 @@ public class PauseMenu : MonoBehaviour
     }
 
     void Update()
-{
-    if (SceneManager.GetActiveScene().buildIndex >= 2)
     {
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+        if (SceneManager.GetActiveScene().buildIndex >= 2)
         {
-            if (isPaused)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Resume();
-            }
-            else
-            {
-                Pause();
+                if (isPaused)
+                {
+                    Resume();
+                }
+                else
+                {
+                    Pause();
+                }
             }
         }
+        else
+        {
+            Resume();
+        }
     }
-    else
-    {
-        Resume();
-    }
-}
-
 
     public void Resume()
     {
