@@ -71,7 +71,7 @@ public class ScalePoint : MonoBehaviour
                 player.GetComponent<PlayerMovement>().direction = false;
             }
             if ((dist > 0 || player.GetComponent<PlayerMovement>().canOut) && (dist < 0 || player.GetComponent<PlayerMovement>().canIn)) {
-                player.transform.Translate(-playerVec.normalized * Mathf.Clamp(dist * scaleFactor,-0.3f * Mathf.Abs(player.transform.localScale.y),0.3f * Mathf.Abs(player.transform.localScale.y)));
+                player.transform.Translate(-playerVec.normalized * Mathf.Clamp(dist * scaleFactor,-0.4f * Mathf.Abs(player.transform.localScale.y),0.4f * Mathf.Abs(player.transform.localScale.y)));
                 player.transform.localScale = player.transform.localScale.normalized * Mathf.Clamp(ratio * (player.transform.position - transform.position).magnitude,0.5f,15f);
                 ParticleSystem.MainModule main = player.transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().main;
                 main.startSize = new ParticleSystem.MinMaxCurve(0.4f * player.transform.localScale.y, 0.8f * player.transform.localScale.y);
