@@ -16,7 +16,6 @@ public class PlaylistManager : MonoBehaviour
             Debug.LogError("AudioManager instance is not found!");
             return;
         }
-
         ShuffleSongs();
         PlayCurrentSong();
     }
