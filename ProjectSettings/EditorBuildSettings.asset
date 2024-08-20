@@ -51,8 +51,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 11 [Gravity2].unity
     guid: 6529a33ed662241f580ad0ee45fb51bd
   - enabled: 1
-    path: Assets/Scenes/Level 12 [spike].unity
+    path: Assets/Scenes/Level 12 [Spike].unity
     guid: 6fcef7b00ab6b45f4b9b6cb7fd65ef6b
+  - enabled: 1
+    path: Assets/Scenes/Level 13 [Box].unity
+    guid: 894fb199ae51b46cba4e50c397ed3603
   - enabled: 1
     path: Assets/Scenes/New Level 1 [Vince].unity
     guid: b3be63b9e517d475db2fd5a2e3c969a2
