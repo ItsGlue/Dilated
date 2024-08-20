@@ -8,7 +8,10 @@ public class ButtonScript : MonoBehaviour
     private SpriteRenderer parentSpriteRenderer;
     private bool isPressed = false;
     public GameObject ScalePoint;
+    private SpriteRenderer scaleSpriteRenderer;
     private ScalePoint scaleScript;
+
+    private int colliderCount = 0;
 
     void Start()
     {
@@ -21,11 +24,14 @@ public class ButtonScript : MonoBehaviour
     {
         if (parentSpriteRenderer != null)
         {
-            parentSpriteRenderer.sprite = pressedSprite;
-            //sfx
-            //AudioManager.Instance.PlaySFX("Button");
-            isPressed = true;
-            scaleScript.ActiveSprite();
+            colliderCount++;
+
+            if (colliderCount == 1)
+            {
+                //sfx
+                //AudioManager.Instance.PlaySFX("Button");
+                SetButtonState(true);
+            }
         }
     }
 
@@ -33,9 +39,28 @@ public class ButtonScript : MonoBehaviour
     {
         if (parentSpriteRenderer != null)
         {
+            colliderCount--;
+
+            if (colliderCount == 0)
+            {
+                SetButtonState(false);
+            }
+        }
+    }
+
+    private void SetButtonState(bool pressed)
+    {
+        if (pressed)
+        {
+            parentSpriteRenderer.sprite = pressedSprite;
+            scaleScript.ActiveSprite();
+            isPressed = true;
+        }
+        else
+        {
             parentSpriteRenderer.sprite = notPressedSprite;
-            isPressed = false;
             scaleScript.InactiveSprite();
+            isPressed = false;
         }
     }
 
