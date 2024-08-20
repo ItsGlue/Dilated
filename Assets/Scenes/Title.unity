@@ -1545,6 +1545,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6702466844635136496, guid: 197271bb1098c441ea5c59e18da6f43d, type: 3}
+      propertyPath: m_Color.a
+      value: 0.23921569
+      objectReference: {fileID: 0}
     - target: {fileID: 7498439081097281264, guid: 197271bb1098c441ea5c59e18da6f43d, type: 3}
       propertyPath: m_UiScaleMode
       value: 1
