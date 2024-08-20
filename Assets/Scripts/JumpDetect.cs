@@ -15,7 +15,7 @@ public class JumpDetect : MonoBehaviour
     {
         
     }
-    void OnTriggerEnter2D(Collider2D other) {
+    void OnTriggerStay2D(Collider2D other) {
         if (other.gameObject.tag == "Ground") {
             SendMessageUpwards("AllowJump", true);
         }
