@@ -136,6 +136,8 @@ public class PlayerMovement : MonoBehaviour
     }
     void End() {
         //play animations?
+        //sfx
+        //AudioManager.Instance.PlaySFX("Death");
         currLevel++;
         if (currLevel > PlayerPrefs.GetInt("maxlevel")) {
             PlayerPrefs.SetInt("maxlevel", currLevel);

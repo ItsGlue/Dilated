@@ -12,16 +12,23 @@ public class PauseMenu : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) /*&& SceneManager.GetActiveScene().buildIndex >= 2*/)
+        if (SceneManager.GetActiveScene().buildIndex >= 2) 
         {
-            if (isPaused)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Resume();
+                if (isPaused)
+                {
+                    Resume();
+                }
+                else
+                {
+                    Pause();
+                }
             }
-            else
-            {
-                Pause();
-            }
+        }
+        else
+        {
+            Resume();
         }
     }
 
