@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: Assets/Scenes/Level 0 [Testing].unity
+    guid: 722f5aaea6c5248d2976fe8f259b6d86
+  - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: c859683be1c8a4df08fa07438a42de11
+  - enabled: 1
+    path: Assets/Scenes/Level Select.unity
+    guid: 9d45a4c09f6cb4f30818b68720b52162
+  - enabled: 1
+    path: Assets/Scenes/Level 1 [Tutorial 1].unity
+    guid: 7206f24d18976474fa7dbeeccb3f09a6
+  - enabled: 1
+    path: Assets/Scenes/Level 2 [Tutorial 2].unity
+    guid: a31b6b97804994a718af2f1f3b8ffb61
+  - enabled: 1
+    path: Assets/Scenes/Level 3 [Tutorial3].unity
+    guid: 8ea3cd40c9dc64c98beec9c94b9be8e6
+  - enabled: 1
+    path: Assets/Scenes/Level 4 [Scaling1].unity
+    guid: a251a5cfaac8a4e078f77e32a91d09b9
+  - enabled: 1
+    path: Assets/Scenes/Level 5 [Scaling2].unity
+    guid: ab84a5879450444afb2ac5e37752d8a4
+  - enabled: 1
+    path: Assets/Scenes/Level 6 [Button1].unity
+    guid: 45dd8fe6b48234816a12e67e2a71b0a8
+  - enabled: 1
+    path: Assets/Scenes/Level 7 [Button2].unity
+    guid: 4c2330b68a1834b07a8d7c7facfdd68f
+  - enabled: 1
+    path: Assets/Scenes/Level 8 [Button3].unity
+    guid: facf2f4b18d644f4bbc40740ef11283f
+  - enabled: 1
+    path: Assets/Scenes/Level 9 [ScaleTech].unity
+    guid: 78305546990834e8782d35adee66d384
+  - enabled: 1
+    path: Assets/Scenes/Level 10 [Gravity1].unity
+    guid: de418ca60e67a46689fdea7c40011afa
+  - enabled: 1
+    path: Assets/Scenes/Level 11 [Gravity2].unity
+    guid: 6529a33ed662241f580ad0ee45fb51bd
+  - enabled: 1
+    path: Assets/Scenes/Level 12 [spike].unity
+    guid: 6fcef7b00ab6b45f4b9b6cb7fd65ef6b
+  - enabled: 1
+    path: Assets/Scenes/New Level 1 [Vince].unity
+    guid: b3be63b9e517d475db2fd5a2e3c969a2
+  - enabled: 1
+    path: Assets/Scenes/New Level 2 [Vince].unity
+    guid: cd72c3bb59e6d44f7b209548a2c2a07f
+  m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
