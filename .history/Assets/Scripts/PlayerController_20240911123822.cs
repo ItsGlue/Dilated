@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
-using Unity.VisualScripting;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -25,16 +24,13 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator squashStretchAnimator;
 
-    private bool triggered; 
     private void Start()
     {
-        Debug.Log("asdfjasfjklalkjfs");
         rb = GetComponent<Rigidbody2D>();
         controlEnabled = true;
         resetPosition = Vector2.zero;
         currLevel = SceneManager.GetActiveScene().buildIndex - 1;
         canJump = false;
-        triggered = false;
     }
 
     private void Update()
@@ -118,6 +114,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Danger"))
         {
             //sfx
+            Debug.Log("ihiihlkjkl");
             AudioManager.Instance.PlaySFX("Death");
             Reset();
         }
@@ -142,15 +139,12 @@ public class PlayerMovement : MonoBehaviour
     }
     void End() {
         //play animations?
-        if (!triggered) {
-            Debug.Log("triggered");
-            triggered = true; 
-            currLevel++;
-            if (currLevel > PlayerPrefs.GetInt("maxlevel")) {
-                PlayerPrefs.SetInt("maxlevel", currLevel);
-            }
-            SceneManager.LoadScene(currLevel + 1);
+        
+        currLevel++;
+        if (currLevel > PlayerPrefs.GetInt("maxlevel")) {
+            PlayerPrefs.SetInt("maxlevel", currLevel);
         }
+        SceneManager.LoadScene(currLevel + 1);
     }
     public void AllowJump(bool allow) {
         canJump = allow;

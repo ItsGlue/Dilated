@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
-using Unity.VisualScripting;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -28,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
     private bool triggered; 
     private void Start()
     {
-        Debug.Log("asdfjasfjklalkjfs");
         rb = GetComponent<Rigidbody2D>();
         controlEnabled = true;
         resetPosition = Vector2.zero;
@@ -142,15 +140,12 @@ public class PlayerMovement : MonoBehaviour
     }
     void End() {
         //play animations?
-        if (!triggered) {
-            Debug.Log("triggered");
-            triggered = true; 
-            currLevel++;
-            if (currLevel > PlayerPrefs.GetInt("maxlevel")) {
-                PlayerPrefs.SetInt("maxlevel", currLevel);
-            }
-            SceneManager.LoadScene(currLevel + 1);
+        
+        currLevel++;
+        if (currLevel > PlayerPrefs.GetInt("maxlevel")) {
+            PlayerPrefs.SetInt("maxlevel", currLevel);
         }
+        SceneManager.LoadScene(currLevel + 1);
     }
     public void AllowJump(bool allow) {
         canJump = allow;

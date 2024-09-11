@@ -28,7 +28,6 @@ public class PlayerMovement : MonoBehaviour
     private bool triggered; 
     private void Start()
     {
-        Debug.Log("asdfjasfjklalkjfs");
         rb = GetComponent<Rigidbody2D>();
         controlEnabled = true;
         resetPosition = Vector2.zero;
